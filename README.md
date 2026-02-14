@@ -1,4 +1,4 @@
-# CJ Chen Resume (🚧 Under Construction)
+# CJ Chen Resume 
 
 LaTeX template for my personal resume
 
