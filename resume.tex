@@ -69,7 +69,7 @@
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeUniversitySubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -77,6 +77,20 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeADSKSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \hspace{-8pt}\large\textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      % \hspace{12pt}\textbf{#1} & #2 \\
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
 
 \newcommand{\resumeInternshipSubheading}[4]{
   \vspace{-2pt}\item
@@ -142,7 +156,7 @@
     
     \section{Skills}
     
-    \small Python3, C\#, Serverless, CI/CD, ECS, Javascript, Typescript, Postgres, RDS, Spinnaker, Jenkins/Groovy, Bash, Cypress, React, Kotlin, Kubernetes, AWS Lambda
+    \small Python, C\#, Serverless, CI/CD, ECS, Javascript, Typescript, Postgres, RDS, Spinnaker, Jenkins/Groovy, Bash, Cypress, React, Kotlin, Kubernetes, AWS Lambda
 
 
     % \small{\item{
@@ -177,9 +191,10 @@
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
 
+  \resumeADSKSubheading
+    {Autodesk Inc (Previously PlanGrid)}{Sept 2018 -- Apr 2019, Aug 2019 -- Present}
   \resumeSubheading
-    {Senior Platform Engineer}{Jan 2025 -- Apr 2026}
-    {Autodesk Inc}{San Francisco, CA}
+    {Senior Platform Engineer}{San Francisco, CA}
     \resumeItemListStart
       \resumeItem{Led and onboarded new team focused on platformizing quality tooling and test-data generation}
       \resumeItem{Designed, developed, and maintained a serverless lambda service using C\# and Python, supporting regionalization validation and load testing across distributed systems.}
@@ -187,8 +202,8 @@
     \resumeItemListEnd
 
   \resumeSubheading
-    {Senior DevOps Engineer}{Oct 2022 -- Jan 2025}
-    {Autodesk Inc}{San Francisco, CA}
+    {Senior DevOps Engineer}{San Francisco, CA}
+    % {Autodesk Inc}{San Francisco, CA}
     \resumeItemListStart
       \resumeItem{Contributed to observability, CI/CD pipeline development, and security vulnerability management for Autodesk Forma, supporting a high-traffic, high-availability cloud service operating under FedRAMP and SOC2 compliance requirements.}
       \resumeItem{Executed large-scale data migration for a 24x large Amazon RDS instance with 8k QPS between AWS accounts to enable read replicas, failovers and improve performance.}
@@ -196,8 +211,8 @@
       \resumeItem{Led Construction Backend Engineering Town Hall, facilitating cross-team collaboration on shared backend architecture and platform challenges.}
     \resumeItemListEnd
   \resumeSubheading
-    {Automation Platform Engineer}{Sept 2018 -- Apr 2019, Aug 2019 -- Oct 2022}
-    {PlanGrid (acq. Autodesk Inc)}{San Francisco, CA}
+    {Automation Platform Engineer}{San Francisco, CA}
+    % {PlanGrid (acq. Autodesk Inc)}{San Francisco, CA}
     \resumeItemListStart
       \resumeItem{Developed and maintained CI/CD pipelines and reusable test packages to enable feature teams to build robust automated testing frameworks and improve test quality and coverage.}
       \resumeItem{Maintained and scaled an internal service responsible for generating, persisting, and dynamically assigning complex project data to users on demand for validation workflows.}
@@ -209,7 +224,7 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \resumeUniversitySubheading
       {University of Waterloo}{Sep 2014 -- Jun 2019}
       {Bachelor Degree in Honours Computer Science}{Ontario, Canada}
   \resumeSubHeadingListEnd
@@ -221,9 +236,10 @@
     \resumeInternshipSubheading
       {Quality Automation Intern}{Jan 2018 -- Apr 2018}
       {FutureAdvisor (acq. BlackRock)}{San Francisco, CA}
-      % \resumeItemListStart
-      %     \resumeItem{Selenium, Java}
-      % \resumeItemListEnd
+      \resumeItemListStart
+          \resumeItem{Selenium, Java}
+          \resumeItem{Reduced test run time from 3 hours to 30 min using Selenium Element Caching}
+      \resumeItemListEnd
 
     \resumeInternshipSubheading
       {Co-op Student}{May 2017 -- Aug 2017}
