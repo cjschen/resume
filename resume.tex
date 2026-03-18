@@ -20,6 +20,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{multicol}
+\usepackage{ulem}
 \setlength{\footskip}{4.1pt}
 
 %----------FONT OPTIONS----------
@@ -72,8 +73,8 @@
 \newcommand{\resumeUniversitySubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1} & \small{#4} \\
+      \textit{\small#3} & \textit{\small#2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -88,15 +89,15 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       % \hspace{12pt}\textbf{#1} & #2 \\
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \small\textit{#2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeInternshipSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.47\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \small\textbf{#1} & \small#2 \\
-      \small\textit{\small#3} & \textit{\small #4} \\
+      \small\textbf{#1} & \small#4 \\
+      \small\small#3 & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -108,8 +109,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[1]{
-    \item \small#1 \vspace{-7pt}
+\newcommand{\resumeProjectHeading}[3]{
+    % \item \small#1 \vspace{-7pt}
+    % \item \small\href{#2}{\underline{#2}}\vspace{-7pt}
+    \item \small{\href{#3}{\uline{#1}} $|$ \textit{#2}\vspace{-5pt}}
 }
 
 
@@ -145,7 +148,8 @@
     \textbf{\Huge Sijia (CJ) Chen} \\ \vspace{1pt}
     \small (415) 988-0835 $|$ \href{mailto:sijia1996@gmail.com}{\underline{sijia1996@gmail.com}} $|$ 
     \href{https://www.linkedin.com/in/cj-chen/}{\underline{linkedin.com/in/cj-chen}} $|$
-    \href{https://github.com/cjschen}{\underline{github.com/cjschen}}
+    \href{https://github.com/cjschen}{\underline{github.com/cjschen}} $|$
+    San Francisco, CA
 \end{center}
 
 %
@@ -154,11 +158,10 @@
     \section{About Me}
     \small University of Waterloo educated Platform Engineer with 8 years of professional experience who is passionate about building robust and scalable tooling and backend platforms.
 
-    \vfill\null
     \columnbreak
     \section{Skills}
     
-    \small Python, C\#, Serverless, CI/CD, ECS, Javascript, Typescript, Postgres, RDS, Spinnaker, Jenkins/Groovy, Bash, Cypress, React, Kotlin, Kubernetes, AWS Lambda, Splunk, LaunchDarkly
+    \small Python, C\#, Serverless, CI/CD, ECS, Javascript, Datadog, Postgres, RDS, Jenkins, Bash, React, Kubernetes, AWS Lambda, Splunk, LaunchDarkly, Terraform
 
 
     % \small{\item{
@@ -166,6 +169,7 @@
     %  \textbf{Frameworks}{: React,  Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
     %  \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
     %  \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    %  Cypress,/Groovy, Kotlin, Spinnaker, Javascript
     % }}
 
   \end{multicols}
@@ -194,30 +198,32 @@
 %-------------------------------------------
 
   \resumeADSKSubheading
-    {Autodesk Inc (Previously PlanGrid)}{Sept 2018 -- Apr 2019, Aug 2019 -- Present}
+    {Autodesk Inc (Previously PlanGrid)}{San Francisco, CA}
   \resumeSubheading
-    {Senior Platform Engineer}{San Francisco, CA}
+    {Senior Platform Engineer}{Jan 2025 -- Present}
+    % {Senior Platform Engineer}{Jan 2025 -- Apr 2026}
     \resumeItemListStart
       \resumeItem{\textbf{Led and onboarded new team} focused on platformizing quality tooling and test-data generation}
-      \resumeItem{\textbf{Designed, developed, and maintained a serverless lambda service} using C\# and Python, supporting regionalization validation and load testing across distributed systems.}
+      \resumeItem{\textbf{Designed, developed, and maintained a serverless lambda service} using C\# and Python, supporting validation of data in new datacenters and load testing across distributed systems, reducing test data creation time from \textbf{2 months to 30 minutes}.}
+      % \resumeItem{Worked with Security teams to \textbf{threat model} service and implemented security controls to prevent modification of customer data and appropriate access controls.}
       \resumeItem{Collaborated with multiple engineering teams across Autodesk to promote \textbf{inner sourcing}, enabling cross-team adoption and shared ownership.}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Senior DevOps Engineer}{San Francisco, CA}
+    {Senior DevOps Engineer}{Oct 2022 -- Jan 2025}
     % {Autodesk Inc}{San Francisco, CA}
     \resumeItemListStart
       \resumeItem{\textbf{Contributed to observability, CI/CD pipelines, and vulnerability management} for Autodesk Forma, supporting a high-traffic, high-availability cloud service operating under \textbf{FedRAMP and SOC2} compliance requirements.}
-      \resumeItem{\textbf{Executed large-scale data migration} for a 24x large Amazon RDS instance with \textbf{8k QPS} between AWS accounts to enable read replicas, failovers and improve performance.}
-      \resumeItem{\textbf{Led regional deployment} of Autodesk Construction Cloud components into new Australian Datacenter to facilitate performance improvements and data sovereignty requirements for customers.}
+      \resumeItem{\textbf{Executed large-scale data migration} for a 24x large Amazon RDS instance with \textbf{8k QPS} to enable read replicas, failovers and improve performance.}
+      \resumeItem{\textbf{Led expansion} of Autodesk Construction Cloud components into new Australian Datacenter to facilitate performance improvements and data sovereignty requirements for customers.}
       \resumeItem{\textbf{Led Construction Backend Engineering Town Hall}, facilitating cross-team collaboration on shared backend architecture and platform challenges.}
     \resumeItemListEnd
   \resumeSubheading
-    {Automation Platform Engineer}{San Francisco, CA}
+    {Automation Platform Engineer}{Sept 2018 -- Apr 2019, Aug 2019 -- Oct 2022}
     % {PlanGrid (acq. Autodesk Inc)}{San Francisco, CA}
     \resumeItemListStart
       \resumeItem{Developed and maintained CI/CD pipelines and reusable test packages to enable feature teams to build robust automated testing frameworks and improve test quality and coverage.}
-      \resumeItem{\textbf{Maintained and scaled} an internal service responsible for generating, persisting, and dynamically assigning complex project data to users on demand for validation workflows.}
+      \resumeItem{\textbf{Maintained and scaled} an internal service on Kubernetes responsible for generating, persisting, and dynamically assigning complex project data to users on demand for validation workflows.}
       \resumeItem{Led monthly meetings and events for Female and Non-Binary R\&D members within Autodesk Construction Solutions, fostering inclusion, mentorship, and cross-team collaboration.}
   \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -253,7 +259,8 @@
       {Security Data Analyst}{Sept 2016 -- Dec 2016}
       {Royal Bank of Canada}{Toronto, Canada}
       % \resumeItemListStart
-      %     \resumeItem{Javascript, d3.js}
+      %     \resumeItem{Developed internal threat modeling data visualization with d3.js in parternship with IBM} 
+      %     % \resumeItem{ D3.js, Javascript}
       % \resumeItemListEnd
     \resumeInternshipSubheading
       {Mobile Developer}{Jan 2016 -- Apr 2016}
@@ -270,20 +277,21 @@
       % \resumeItemListEnd
   \resumeSubHeadingListEnd
   \columnbreak
+
   \section{Projects}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\textbf{Financial Reporter} $|$ \emph{Python, Google Cloud API}}
+      {\textbf{Financial Reporter}}{Python, Google Cloud API} {https://github.com/cjschen/google-projects/}
       \resumeItemListStart
         \resumeItem{Fetches transaction reports from Gmail, processes, categorizes and pushes it into Google Sheets}
       \resumeItemListEnd
     \resumeProjectHeading
-      {\textbf{Personal Website} $|$ \emph{React, Javascript, Github Actions}}
+      {\textbf{Personal Website}}{React, Javascript, Github Actions}  {https://github.com/cjschen/homepage}
       \resumeItemListStart
         \resumeItem{Portfolio Website originally deployed on Heroku, then Github Pages. Deployed using Github Actions}
       \resumeItemListEnd
     \resumeProjectHeading
-      {\textbf{AO3 Trends} | \emph{BeautifulSoup, SQLite, Matplotlib}}
+      {\textbf{AO3 Trends}}{BeautifulSoup, SQLite, Matplotlib}  {https://github.com/cjschen/ao3-stats}
       % SQLAlchemy, Numpy, Jupyter
       \resumeItemListStart
         \resumeItem{Web Scrapes archiveofourown.org in accordance with the robot.txt file requested rate limit}
